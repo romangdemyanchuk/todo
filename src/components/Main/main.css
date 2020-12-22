@@ -1,0 +1,47 @@
+.container {
+    padding: 5%;
+}
+form#basic {
+    display: flex;
+    justify-content: center;
+}
+
+.border {
+    list-style: none;
+    padding: 0;
+}
+.border li {
+    padding: 7px 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+    -2px -2px 5px 0 rgba(0,0,0,.1),
+    2px 2px 5px 0 rgba(0,0,0,.1),
+    -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 20px;
+    letter-spacing: 2px;
+    justify-content: space-between;
+    display: flex;
+}
+.border li:hover {
+    cursor: pointer;
+}
+.ant-modal-footer {
+    display: none;
+}
+.ant-form-item-control-input-content {
+    display: flex;
+    justify-content: flex-end;
+}
+.editCancelBtn {
+    margin-right: 10px;
+}
+.ant-modal-body {
+    padding: 5px 10px 1px 10px;
+}
+.btnsWrapper  img {
+    width: 20px;
+}
+.resetBtn {
+    margin: 0 8px;
+}
