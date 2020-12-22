@@ -1,11 +1,15 @@
 import React from "react";
-import {Button, Form, Input, Modal} from "antd";
+import {Button, Form, Input, Modal, Select} from "antd";
 import {useDispatch} from "react-redux";
 import {editItem} from "../../../session/mainReducer";
+import {Option} from "antd/es/mentions";
 
 export const EditTodoModal = ({ modalIsOPen, setModalIsOpen, item}) => {
     const [form] = Form.useForm();
     const dispatch = useDispatch()
+    let formInitialValues = {title: item ? item.title : '',
+        category: item ? item.category : ''}
+    form.setFieldsValue(formInitialValues)
 
     const closeModal = () => {
         setModalIsOpen(false);
@@ -13,7 +17,9 @@ export const EditTodoModal = ({ modalIsOPen, setModalIsOpen, item}) => {
     const handleSubmit = (values) => {
         setModalIsOpen(false)
         editItem(values, item.id)(dispatch)
+        form.setFieldsValue({title: '', category: ''})
     };
+    const categories = ['family', 'work', 'leisure', 'other'];
 
     return (
         <Modal
@@ -28,7 +34,7 @@ export const EditTodoModal = ({ modalIsOPen, setModalIsOpen, item}) => {
                 onFinish={(values) => {
                     handleSubmit(values);
                 }}
-                initialValues={{title: item !== null ? item.title : ''}}
+                initialValues={formInitialValues}
             >
                 <Form.Item
                     label="Title"
@@ -38,6 +44,18 @@ export const EditTodoModal = ({ modalIsOPen, setModalIsOpen, item}) => {
                     <Input
                         placeholder="todo title"
                     />
+                </Form.Item>
+                <Form.Item
+                    label="Сategory"
+                    name="category"
+                    rules={[{ required: true, message: 'Please input category of todo!' }]}
+                >
+                    <Select defaultValue={''}
+                    >
+                        {categories.map(category => (
+                            <Option key={category}>{category}</Option>
+                        ))}
+                    </Select>
                 </Form.Item>
                 <Form.Item className="editFormBtns">
                     <Button type="primary" className="editCancelBtn" onClick={closeModal}>

@@ -4,6 +4,7 @@
 form#basic {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .border {
@@ -44,4 +45,10 @@ form#basic {
 }
 .resetBtn {
     margin: 0 8px;
+}
+.searchByName {
+    margin-bottom: 10px;
+}
+.ant-row.ant-form-item {
+    display: block;
 }

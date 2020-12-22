@@ -1,14 +1,16 @@
-import {addTodo, completedTodo, deleteTodo, editTodo} from "./sessionActions";
-import {ADD_TODO, COMPLETED_TODO, DELETE_TODO, EDIT_TODO} from "./sessionConstants";
+import {addTodo, completedTodo, deleteTodo, editTodo, filteredTodo} from "./sessionActions";
+import {ADD_TODO, COMPLETED_TODO, DELETE_TODO, EDIT_TODO, FILTERED_TODO} from "./sessionConstants";
 
 const initialState = {
     todos: [
         {
             id: 1,
             title: 'Todo 1',
-            completed: false
-        },
-    ]
+            completed: false,
+            category:'other'
+        }
+    ],
+    filteredTodos:[]
 };
 
 const MainReducer = (state = initialState, action) => {
@@ -27,6 +29,7 @@ const MainReducer = (state = initialState, action) => {
             let CopyState = {...state};
             CopyState.todos = [...state.todos];
             CopyState.todos[idOfEditedItem].title = action.payload.title;
+            CopyState.todos[idOfEditedItem].category = action.payload.category;
             return CopyState
         case COMPLETED_TODO:
             console.log('action.payload', action.payload)
@@ -35,6 +38,12 @@ const MainReducer = (state = initialState, action) => {
             CopyOfState.todos = [...state.todos];
             CopyOfState.todos[idOfCompletedItem].completed = !CopyOfState.todos[idOfCompletedItem].completed;
             return CopyOfState
+        case FILTERED_TODO:
+            console.log('action.payload', action.payload)
+            return {
+                ...state,
+                filteredTodos: [...state.filteredTodos, action.payload]
+            }
 
 
         default:
@@ -42,6 +51,7 @@ const MainReducer = (state = initialState, action) => {
     }
 };
 export const newItem = (newItem) => (dispatch) => {
+    console.log('newItem', newItem)
     dispatch(addTodo(newItem))
 };
 
@@ -49,13 +59,17 @@ export const deleteItem = ( id) => (dispatch) => {
     dispatch(deleteTodo(id))
 };
 
-export const editItem = ({title}, id) => (dispatch) => {
-    dispatch(editTodo({title, id}))
+export const editItem = ({title, category}, id) => (dispatch) => {
+    dispatch(editTodo({title, category, id}))
 };
 
 export const completeItem = (id) => (dispatch) => {
     console.log(123)
     dispatch(completedTodo({id}))
+};
+export const filteredItems = (items) => (dispatch) => {
+    console.log('items', items)
+    dispatch(filteredTodo(items))
 };
 
 export default MainReducer;
