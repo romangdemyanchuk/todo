@@ -7,7 +7,8 @@ const initialState = {
             id: 1,
             title: 'Todo 1',
             completed: false,
-            category:'other'
+            category:'other',
+            date: "2020-11-30"
         }
     ],
     filteredTodos:[]
@@ -32,14 +33,12 @@ const MainReducer = (state = initialState, action) => {
             CopyState.todos[idOfEditedItem].category = action.payload.category;
             return CopyState
         case COMPLETED_TODO:
-            console.log('action.payload', action.payload)
             let idOfCompletedItem = state.todos.findIndex((el) => el.id === action.payload.id)
             let CopyOfState = {...state};
             CopyOfState.todos = [...state.todos];
             CopyOfState.todos[idOfCompletedItem].completed = !CopyOfState.todos[idOfCompletedItem].completed;
             return CopyOfState
         case FILTERED_TODO:
-            console.log('action.payload', action.payload)
             return {
                 ...state,
                 filteredTodos: [...state.filteredTodos, action.payload]

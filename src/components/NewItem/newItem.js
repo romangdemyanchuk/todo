@@ -15,7 +15,8 @@ const NewItem = () => {
             id: Date.now(),
             title,
             completed: false,
-            category
+            category,
+            date: new Date()
         }
         newItem(newEl)(dispatch)
         form.resetFields();
@@ -31,14 +32,14 @@ const NewItem = () => {
             initialValues={{ remember: true }}
         >
             <Form.Item
-                label="new todo"
                 name="title"
+                label="title"
                 rules={[{ required: true, message: 'Please input todo!' }]}
             >
                 <Input />
             </Form.Item>
             <Form.Item
-                label="select category"
+                label="category"
                 name="category"
                 rules={[{ required: true, message: 'Please select category!' }]}
             >

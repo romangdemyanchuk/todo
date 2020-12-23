@@ -3,11 +3,13 @@
 }
 form#basic {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-end;
 }
 
 .border {
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
     list-style: none;
     padding: 0;
 }
@@ -51,4 +53,9 @@ form#basic {
 }
 .ant-row.ant-form-item {
     display: block;
+}
+.filteredWrapper {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }

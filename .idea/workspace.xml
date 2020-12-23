@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3121e4f4-0da1-484e-a245-de807aefca17" name="Default Changelist" comment="">
+    <list default="true" id="3121e4f4-0da1-484e-a245-de807aefca17" name="Default Changelist" comment="filtered of todos">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/modals/EditTodoModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/modals/EditTodoModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewItem/newItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewItem/newItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/session/mainReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/session/mainReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/session/sessionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/session/sessionActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/session/sessionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/session/sessionConstants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +50,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608633199778</updated>
-      <workItem from="1608633202929" duration="28931000" />
+      <workItem from="1608633202929" duration="29071000" />
+      <workItem from="1608710561282" duration="12769000" />
     </task>
+    <task id="LOCAL-00001" summary="filtered of todos">
+      <created>1608672768630</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608672768630</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,5 +76,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="filtered of todos" />
+    <option name="LAST_COMMIT_MESSAGE" value="filtered of todos" />
   </component>
 </project>
