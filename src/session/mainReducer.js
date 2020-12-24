@@ -41,7 +41,7 @@ const MainReducer = (state = initialState, action) => {
         case FILTERED_TODO:
             return {
                 ...state,
-                filteredTodos: [...state.filteredTodos, action.payload]
+                filteredTodos: action.payload
             }
 
 
@@ -63,11 +63,9 @@ export const editItem = ({title, category}, id) => (dispatch) => {
 };
 
 export const completeItem = (id) => (dispatch) => {
-    console.log(123)
     dispatch(completedTodo({id}))
 };
 export const filteredItems = (items) => (dispatch) => {
-    console.log('items', items)
     dispatch(filteredTodo(items))
 };
 
