@@ -1,23 +1,12 @@
-import React, {useState} from "react";
-import {Button, Form, Input, Modal} from "antd";
+import React from "react";
+import { Modal} from "antd";
 import {ChromePicker} from "react-color";
-import {useDispatch} from "react-redux";
 
 export const ChangeThemeModal = ({ modalIsOPen, setModalIsOpen, changeBackground}) => {
-    const [color, setColor] = useState('#fff')
-    const [form] = Form.useForm();
-    const dispatch = useDispatch()
+    let color = '#fff'
 
     const closeModal = () => {
         setModalIsOpen(false);
-    };
-    const handleSubmit = (values) => {
-        setModalIsOpen(false)
-        // editItem(values, item.id)(dispatch)
-    };
-
-    const onReset = () => {
-        form.resetFields();
     };
 
     return (

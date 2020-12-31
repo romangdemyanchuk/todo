@@ -3,16 +3,17 @@ import {ADD_TODO, COMPLETED_TODO, DELETE_TODO, EDIT_TODO, FILTERED_TODO} from ".
 
 const initialState = {
     todos: [
-        {
-            id: 1,
-            title: 'Todo 1',
-            completed: false,
-            category:'other',
-            date: "2020-11-30"
-        }
+        // {
+        //     id: 1,
+        //     title: 'Todo 1',
+        //     completed: false,
+        //     category:'other',
+        //     date: "2020-11-30"
+        // }
     ],
     filteredTodos:[]
 };
+
 
 const MainReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -50,20 +51,56 @@ const MainReducer = (state = initialState, action) => {
     }
 };
 export const newItem = (newItem) => (dispatch) => {
-    console.log('newItem', newItem)
+    let existingEntries = JSON.parse(localStorage.getItem("items"));
+    if(existingEntries == null)
+        localStorage.setItem("items", JSON.stringify(existingEntries));
+    else {
+        existingEntries.push(newItem);
+        localStorage.setItem("items", JSON.stringify(existingEntries));
+    }
     dispatch(addTodo(newItem))
 };
 
-export const deleteItem = ( id) => (dispatch) => {
+export const deleteItem = (id) => (dispatch) => {
+    let existingEntries = JSON.parse(localStorage.getItem("items"));
+    if(existingEntries == null)
+        localStorage.setItem("items", JSON.stringify([]));
+    else {
+        let i=existingEntries.findIndex(movie=>movie.id===id);
+        if(i!==-1){
+            existingEntries.splice(i,1);
+            localStorage.setItem('items', JSON.stringify(existingEntries));
+        }
+    }
     dispatch(deleteTodo(id))
 };
 
-export const editItem = ({title, category}, id) => (dispatch) => {
+export const editItem = ({title, category}, id, history) => (dispatch) => {
+    let existingEntries = JSON.parse(localStorage.getItem("items"));
+    if(existingEntries == null)
+        localStorage.setItem("items", JSON.stringify([]))
+    else {
+        console.log(existingEntries)
+        let idx=existingEntries.findIndex(movie=>movie.id===id);
+        existingEntries[idx].title = title;
+        existingEntries[idx].category = category;
+        localStorage.setItem('items', JSON.stringify(existingEntries));
+    }
+    history.push('/')
     dispatch(editTodo({title, category, id}))
 };
 
-export const completeItem = (id) => (dispatch) => {
-    dispatch(completedTodo({id}))
+export const completeItem = (id, history) => (dispatch) => {
+    let existingEntries = JSON.parse(localStorage.getItem("items"));
+    if(existingEntries == null)
+        localStorage.setItem("items", JSON.stringify([]))
+    else {
+        let idOfCompletedItem = existingEntries.findIndex((el) => el.id === id)
+        existingEntries[idOfCompletedItem].completed = !existingEntries[idOfCompletedItem].completed;
+        localStorage.setItem('items', JSON.stringify(existingEntries));
+    }
+    history.push('/')
+    // dispatch(completedTodo({id}))
 };
 export const filteredItems = (items) => (dispatch) => {
     dispatch(filteredTodo(items))

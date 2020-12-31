@@ -3,6 +3,7 @@ import {Button, Form, Input, Modal, Select} from "antd";
 import {useDispatch} from "react-redux";
 import {editItem} from "../../../session/mainReducer";
 import {Option} from "antd/es/mentions";
+import {useHistory} from "react-router-dom";
 
 export const EditTodoModal = ({ modalIsOPen, setModalIsOpen, item}) => {
     const [form] = Form.useForm();
@@ -14,9 +15,11 @@ export const EditTodoModal = ({ modalIsOPen, setModalIsOpen, item}) => {
     const closeModal = () => {
         setModalIsOpen(false);
     };
+    const history = useHistory();
     const handleSubmit = (values) => {
         setModalIsOpen(false)
-        editItem(values, item.id)(dispatch)
+
+        editItem(values, item.id, history)(dispatch)
         form.setFieldsValue({title: '', category: ''})
     };
     const categories = ['family', 'work', 'leisure', 'other'];
