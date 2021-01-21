@@ -18,8 +18,8 @@ export const EditTodoModal = ({ modalIsOPen, setModalIsOpen, item}) => {
     const history = useHistory();
     const handleSubmit = (values) => {
         setModalIsOpen(false)
-
-        editItem(values, item.id, history)(dispatch)
+        editItem(values, item.id, history)
+        history.push('/')
         form.setFieldsValue({title: '', category: ''})
     };
     const categories = ['family', 'work', 'leisure', 'other'];

@@ -4,14 +4,12 @@ import {useDispatch} from "react-redux";
 
 export const ContactModal = ({ modalIsOPen, setModalIsOpen}) => {
     const [form] = Form.useForm();
-    const dispatch = useDispatch()
 
     const closeModal = () => {
         setModalIsOpen(false);
     };
     const handleSubmit = (values) => {
         setModalIsOpen(false)
-        // editItem(values, item.id)(dispatch)
     };
 
     const onReset = () => {

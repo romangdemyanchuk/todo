@@ -36,11 +36,20 @@ form#basic {
     display: flex;
     justify-content: flex-end;
 }
+.ant-modal-close-x {
+    line-height: 26px !important;
+}
+.ant-modal-header {
+    padding: 2px 8px !important;
+}
+.ant-form-item {
+    margin-bottom: 5px !important;
+}
 .editCancelBtn {
     margin-right: 10px;
 }
 .ant-modal-body {
-    padding: 5px 10px 1px 10px;
+    padding: 5px 10px 1px 10px !important;
 }
 .btnsWrapper  img {
     width: 20px;

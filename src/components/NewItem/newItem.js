@@ -16,8 +16,6 @@ const NewItem = () => {
     const onCollapse = collapsed => {
         setIsCollapsed(collapsed)
     };
-
-    const dispatch = useDispatch();
     const handleSubmit = ({title, category}) => {
         const newEl = {
             id: Date.now(),
@@ -26,7 +24,7 @@ const NewItem = () => {
             category,
             date: new Date()
         }
-        newItem(newEl)(dispatch)
+        newItem(newEl)
         history.push('/');
         form.resetFields();
     };

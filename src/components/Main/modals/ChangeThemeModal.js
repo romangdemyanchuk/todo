@@ -11,7 +11,7 @@ export const ChangeThemeModal = ({ modalIsOPen, setModalIsOpen, changeBackground
 
     return (
         <Modal
-            title="Contact us"
+            title="Change background color"
             visible={modalIsOPen}
             onOk={closeModal}
             onCancel={closeModal}

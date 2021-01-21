@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3121e4f4-0da1-484e-a245-de807aefca17" name="Default Changelist" comment="filtered todos by name, by category, change color of background">
+    <list default="true" id="3121e4f4-0da1-484e-a245-de807aefca17" name="Default Changelist" comment="local storage, pagination">
+      <change afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/mainContainer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/mainContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/modals/ChangeThemeModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/modals/ChangeThemeModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/modals/ContactModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/modals/ContactModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/modals/EditTodoModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/modals/EditTodoModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewItem/newItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewItem/newItem.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewItem/newItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewItem/newItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchByTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchByTitle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/session/mainReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/session/mainReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/session/sessionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/session/sessionActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/session/sessionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/session/sessionConstants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +50,10 @@
       <recent name="E:\Projects\toDoList\src\components\Main\modals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\toDoList\src\components" />
       <recent name="E:\Projects\toDoList\src\components\Main\modals" />
       <recent name="E:\Projects\toDoList\src\components\Sidebar" />
       <recent name="E:\Projects\toDoList\src\components\addItem" />
-      <recent name="E:\Projects\toDoList\src\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -59,7 +67,14 @@
       <workItem from="1608633202929" duration="29071000" />
       <workItem from="1608710561282" duration="12929000" />
       <workItem from="1608803342178" duration="10858000" />
-      <workItem from="1609404542701" duration="18154000" />
+      <workItem from="1609404542701" duration="18648000" />
+      <workItem from="1609694858578" duration="2463000" />
+      <workItem from="1610960540726" duration="20460000" />
+      <workItem from="1611041843485" duration="1985000" />
+      <workItem from="1611043884418" duration="6629000" />
+      <workItem from="1611077854963" duration="9496000" />
+      <workItem from="1611155403211" duration="12294000" />
+      <workItem from="1611219201440" duration="13593000" />
     </task>
     <task id="LOCAL-00001" summary="filtered of todos">
       <created>1608672768630</created>
@@ -82,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608820683278</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="local storage, pagination">
+      <created>1609436151492</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609436151492</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +126,7 @@
     <MESSAGE value="filtered of todos" />
     <MESSAGE value="filtered of todos, transform vue" />
     <MESSAGE value="filtered todos by name, by category, change color of background" />
-    <option name="LAST_COMMIT_MESSAGE" value="filtered todos by name, by category, change color of background" />
+    <MESSAGE value="local storage, pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="local storage, pagination" />
   </component>
 </project>
